@@ -5,12 +5,13 @@ import java.util.Random;
 public class App {
 	public static void ForPlayerOne() {
 		System.out.println("Welocme to snake and ladder game for single player!!!");
-		// @ use case 5 : competing the game and adding the win condition.
+
 		final int winPos = 100;
 		int p1Position = 0;
 		Random rand = new Random();
+		int countChance=0;//@ use case 6 adding the count of moves
 		while (p1Position != 100) {
-
+			countChance++;
 			
 			int dice = rand.nextInt(7) + 1;
 			System.out.println("the number on dice is : " + dice);
@@ -32,7 +33,7 @@ public class App {
 				System.out.println("sorry !! its a snake!! so the position of the player is :" + p1Position);
 			} else
 				System.out.println("it is the waiting move !! so the position of the player is :" + p1Position);
-		}System.out.println("Conratulations !! to you are at 100th position so you win ");
+		}System.out.println("Conratulations !! to you are at 100th position so you win and you are able to win in only "+countChance+" moves");
 	}
 
 	public static void main(String[] args) {
